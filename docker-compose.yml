@@ -1,0 +1,20 @@
+version: "3.0"
+services:
+  product-api:
+    image: spring/produtapi:v1
+    container_name: product-api
+    ports:
+      - "8082:8080"
+    build: .
+    links:
+      - mongodbcon
+    networks: [spring_mongo_net]
+  mongodbcon:
+    image: mongo:latest
+    container_name: mongodbcon
+    ports:
+      - "27017:27017"
+    networks:
+      - spring_mongo_net
+networks:
+  spring_mongo_net:

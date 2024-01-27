@@ -1,0 +1,11 @@
+spring:
+  data:
+    mongodb:
+      uri: mongodb://mongodbcon:27017/springmongodb
+
+# application and mongodb are running locally mongodb://localhost:27017/springmongodb
+# application is running externally in the local machine and mongodb is running as a docker container
+# mongodb://0.0.0.0:27071/springmongodb
+
+# application and mongodb are running as docker container
+# mongodb://<mongodbContainerName>:27017/springmongodb
